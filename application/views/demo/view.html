@@ -1,0 +1,11 @@
+<?php include APPLICATION_VIEWS.'common/header.html' ?>
+
+时间：<?php echo date('Y-m-d'); ?><br>
+数据：<br>
+<ul>
+	<?php foreach ($data as $key => $value) { ?>
+		<li><?php echo $value['name']; ?></li>
+	<?php } ?>
+</ul>
+
+<?php include APPLICATION_VIEWS.'common/footer.html' ?>
