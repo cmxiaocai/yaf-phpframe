@@ -22,4 +22,9 @@ class Bootstrap extends Yaf\Bootstrap_Abstract{
 			$router->addConfig($config->routes);
 	}
 	
+	// 初始化模板路径
+	public function _initView(Yaf\Dispatcher $dispatcher){
+		define('APPLICATION_VIEWS', APPLICATION_PATH . '/views/');
+	}
+	
 }
