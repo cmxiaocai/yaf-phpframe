@@ -5,7 +5,7 @@
  * @since  2014-3-3
  */
 
-class Controller_Demo extends Yaf\Controller_Abstract{
+class DemoController extends Yaf\Controller_Abstract{
 
 	public function IndexAction(){
 		echo 'yaf~';
@@ -77,4 +77,11 @@ class Controller_Demo extends Yaf\Controller_Abstract{
 		return false;
 	}
 	
+	public function modelAction(){
+		$model  = new \UserModel();
+		$result = $model->fetchListByUids(array(1,2));
+		var_dump($result);
+		return false;
+	}
+
  }

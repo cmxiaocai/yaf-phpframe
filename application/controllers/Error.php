@@ -22,7 +22,7 @@
 #define YAF_ERR_AUTOLOAD_FAILED 	520
 #define YAF_ERR_TYPE_ERROR			521
 
-class Controller_Error extends Yaf\Controller_Abstract {
+class ErrorController extends Yaf\Controller_Abstract {
 
 	public function errorAction() {
 		$exception = $this->getRequest()->getException();
