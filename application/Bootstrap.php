@@ -12,6 +12,10 @@ class Bootstrap extends Yaf\Bootstrap_Abstract{
 	// 初始化配置信息
 	public function _initConfig() { 
 		$this->__config = Yaf\Application::app()->getConfig();
+
+		//注册本地类前缀
+		$namespace = $this->__config['application']['library']['localnamespace'];
+		Yaf\Loader::getInstance()->registerLocalNamespace( explode(',', $namespace) );
 	}
 	
 	// 初始化路由配置
