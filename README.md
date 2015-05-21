@@ -16,3 +16,20 @@ YAF扩展框架
     }
 ```
 
+```
+	进入composer.json所在目录执行
+	composer install
+
+	不更新库
+	composer update nothing
+
+	修改composer国内镜像
+	composer.json:
+	{
+    "repositories": [
+        {"type": "composer", "url": "http://pkg.phpcomposer.com/repo/packagist/"},
+        {"packagist": false}
+    ]
+	}
+```
+
