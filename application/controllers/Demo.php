@@ -85,7 +85,7 @@ class DemoController extends Yaf\Controller_Abstract{
 	}
 
 	public function servicesAction(){
-		$services = new services\ucenter\Login();
+		$services = new \services\ucenter\Login();
 		$result   = $services->getUserInfo();
 		var_dump($result);
 		return false;

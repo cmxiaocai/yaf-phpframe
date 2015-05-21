@@ -1,12 +1,12 @@
 {
 	"require": {
-		"phpunit/phpunit": "4.0.13",
-		"monolog/monolog": "1.8.0",
+		"phpunit/phpunit": "4.6.6",
+		"monolog/monolog": "1.13.1",
 		"catfan/medoo": "dev-master"
 	},
 	"autoload": {
 		"psr-0": {
-			"services": "../application/"
+			"services": "application/"
 		}
 	},
 	"minimum-stability": "stable"
