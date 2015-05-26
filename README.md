@@ -33,3 +33,7 @@ YAF扩展框架
 	}
 ```
 
+```
+/usr/local/php-5.4.40/bin/php /data/www/vendor/phpunit/phpunit/phpunit --bootstrap /data/www/test/bootstrap.php /data/www/test/
+```
+
