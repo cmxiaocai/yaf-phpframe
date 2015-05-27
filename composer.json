@@ -1,13 +1,14 @@
 {
-	"require": {
-		"phpunit/phpunit": "4.6.6",
-		"monolog/monolog": "1.13.1",
-		"catfan/medoo": "dev-master"
-	},
-	"autoload": {
-		"psr-0": {
-			"services": "application/"
-		}
-	},
-	"minimum-stability": "stable"
+    "require": {
+        "phpunit/phpunit": "4.6.6",
+        "monolog/monolog": "1.13.1",
+        "catfan/medoo": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "services": "application/",
+            "adapter" : "adapter/"
+        }
+    },
+    "minimum-stability": "stable"
 }

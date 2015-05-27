@@ -5,19 +5,6 @@ class DemoTest extends PHPUnit_YafTestCase{
         parent::setUp();
     }
 
-    public function testBase(){
-        
-        $stack = array();
-        $this->assertEquals(0, count($stack));
-
-        array_push($stack, 'foo');
-        $this->assertEquals('foo', $stack[count($stack)-1]);
-        $this->assertEquals(1, count($stack));
-
-        $this->assertEquals('foo', array_pop($stack));
-        $this->assertEquals(0, count($stack));
-    }
-
     public function testController(){
 
         $request = new PHPUnit_MockYafRequest("GET", "index", "demo", 'view', array());
@@ -26,6 +13,8 @@ class DemoTest extends PHPUnit_YafTestCase{
         $request->setActionName('view');
         $request->setPost('aid', 101);
         $request->setPost('caption', 'xxxxxxx');
+        // $request->setQuery('aid', 101);
+        // $request->setQuery('caption', 'xxxxxxx');
         $this->application->getDispatcher()->dispatch($request);
 
         $title = PHPUnit_MockYafView::getInstance()->get('title');
