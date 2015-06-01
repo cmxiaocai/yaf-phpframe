@@ -7,4 +7,3 @@ define('APPLICATION_ENVIRONMENT', isset($_SERVER['ENVIRONMENT']) ? strtolower($_
 require_once "../vendor/autoload.php";
 $application = new Yaf\Application( APPLICATION_PATH."/config/application.ini", APPLICATION_ENVIRONMENT);
 $application->bootstrap()->run();
-?>

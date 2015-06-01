@@ -52,6 +52,7 @@ class DemoController extends Yaf\Controller_Abstract{
         //var_dump( Util_DateFormat::agotime( time()-85 ) );die;
         $adapter = new \adapter\Mysql();
         $adapter->test();
+        return false;
     }
 
  }

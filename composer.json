@@ -6,8 +6,8 @@
     },
     "autoload": {
         "psr-0": {
-            "services": "application/",
-            "adapter" : "adapter/"
+            "adapter" : "application/",
+            "services": "application/"
         }
     },
     "minimum-stability": "stable",
