@@ -26,7 +26,6 @@ class DemoController extends Yaf\Controller_Abstract{
             array('uid'=>2, 'name'=>'xiaomao'),
             array('uid'=>3, 'name'=>'xiaowei'),
         );
-
         $this->getView()->assign('data',$data);
         $this->getView()->assign('title','*模板使用示例*');
         $this->getView()->assign('post', $this->getRequest()->getPost());
@@ -49,9 +48,13 @@ class DemoController extends Yaf\Controller_Abstract{
     }
 
     public function adapterAction(){
-        //var_dump( Util_DateFormat::agotime( time()-85 ) );die;
         $adapter = new \adapter\Mysql();
         $adapter->test();
+        return false;
+    }
+
+    public function libraryAction(){
+        var_dump( Util_DateFormat::agotime( time()-85 ) );
         return false;
     }
 
