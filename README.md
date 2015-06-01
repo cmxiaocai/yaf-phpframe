@@ -27,7 +27,7 @@ YAF扩展框架
 	composer.json:
 	{
     "repositories": [
-        {"type": "composer", "url": "http://pkg.phpcomposer.com/repo/packagist/"},
+        {"type": "composer", "url": "http://packagist.cn/"},
         {"packagist": false}
     ]
 	}

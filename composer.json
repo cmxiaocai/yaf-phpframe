@@ -10,5 +10,9 @@
             "adapter" : "adapter/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "repositories": [
+        {"type": "composer", "url": "http://packagist.cn/"},
+        {"packagist": false}
+    ]
 }
