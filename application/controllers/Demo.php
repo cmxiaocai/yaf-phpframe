@@ -48,8 +48,9 @@ class DemoController extends Yaf\Controller_Abstract{
     }
 
     public function adapterAction(){
-        $adapter = new \adapter\Mysql();
-        $adapter->test();
+        $connect = (new \adapter\Mysql())->getMasterConnect();
+        $result  = $connect->select('article', '*');
+        var_dump($result);
         return false;
     }
 
