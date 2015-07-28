@@ -59,4 +59,12 @@ class DemoController extends Yaf\Controller_Abstract{
         return false;
     }
 
+/*
+    static public function defaultExceptionHandler($exception, $view) {
+        $view->setScriptPath(APPLICATION_VIEWS);
+        $view->assign("exception", $exception);
+        $view->display('error/error_request.html');
+    }
+*/
+
  }

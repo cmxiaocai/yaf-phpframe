@@ -31,4 +31,37 @@ class Bootstrap extends Yaf\Bootstrap_Abstract{
 		define('APPLICATION_VIEWS', APPLICATION_PATH . '/views/');
 	}
 	
+	//捕获异常
+    public function _initException(Yaf\Dispatcher $dispatcher) {
+        Yaf\Dispatcher::getInstance()->throwException(true);
+        Yaf\Dispatcher::getInstance()->catchException(false);
+        set_exception_handler( array(new Yaf_ExceptionHandler(), 'handler') );
+    }
+
+}
+
+class Yaf_ExceptionHandler {
+
+    public function handler( $exception ) {
+        foreach ( $exception->getTrace() as $trace ) {
+            if ( ! method_exists($trace['class'], 'defaultExceptionHandler' ) ) 
+                continue;
+            call_user_func_array(
+                array( $trace['class'], 'defaultExceptionHandler' ), 
+                array( $exception, $this->getView() )
+            );
+            exit();
+        }
+        $this->defaultExceptionHandler( $exception );
+    }
+
+    public function defaultExceptionHandler( Exception $exception ) {
+        $this->getView()->setScriptPath(APPLICATION_VIEWS);
+        $this->getView()->assign("exception", $exception);
+        $this->getView()->display('error/error.html');die;
+    }
+
+    public function getView() {
+        return Yaf\Dispatcher::getInstance()->initView(APPLICATION_VIEWS);
+    }
 }

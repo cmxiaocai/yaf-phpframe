@@ -1,1 +1,2 @@
-<?php echo 'ERROR::'.$message; ?>
+<?php
+echo Util_Response::apiReturn($exception->getCode(), $exception->getMessage() );
