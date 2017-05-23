@@ -1,2 +1,2 @@
 <?php
-echo Util_Response::apiReturn($exception->getCode(), $exception->getMessage() );
+echo json_encode(['code'=>$exception->getCode(), 'message'=>$exception->getMessage()]);

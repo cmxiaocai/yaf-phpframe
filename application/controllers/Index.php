@@ -6,9 +6,9 @@
  */
 class IndexController extends Yaf\Controller_Abstract{
 
-	public function indexAction() {
-		echo "Hello~";
-		return false;
-	}
+    public function indexAction() {
+        echo "Hello~";
+        return false;
+    }
 
 }

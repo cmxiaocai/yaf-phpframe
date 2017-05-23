@@ -1,7 +1,9 @@
 {
+    "config": {
+        "secure-http": false
+    },
     "require": {
         "phpunit/phpunit": "4.6.6",
-        "monolog/monolog": "1.13.1",
         "catfan/medoo": "dev-master"
     },
     "autoload": {
@@ -12,7 +14,7 @@
     },
     "minimum-stability": "stable",
     "repositories": [
-        {"type": "composer", "url": "http://packagist.cn/"},
+        {"type": "composer", "url": "http://packagist.phpcomposer.com"},
         {"packagist": false}
     ]
 }
